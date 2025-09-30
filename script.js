@@ -1,15 +1,7 @@
-const openBtn = document.getElementById('openModal');
-    const modal = document.getElementById('myModal');
-    const closeBtn = document.getElementById('closeBtn');
-    
-    openBtn.onclick = () => {
-      modal.classList.add('open');
-    };
-    closeBtn.onclick = () => {
-      modal.classList.remove('open');
-    };
-    window.onclick = (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('open');
-      }
-    };
+document.getElementById('openModal').addEventListener('click', function() {
+  document.getElementById('myModal').classList.add('open');
+});
+
+document.getElementById('closeBtn').addEventListener('click', function() {
+  document.getElementById('myModal').classList.remove('open');
+});
