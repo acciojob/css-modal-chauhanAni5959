@@ -2,17 +2,17 @@ const openModalBtn = document.getElementById('openModal');
 const modal = document.getElementById('myModal');
 const closeBtn = document.getElementById('closeBtn');
 
-// Open modal
-openModalBtn.addEventListener('click', () => {
+// Open the modal
+openModalBtn.addEventListener('click', function() {
   modal.classList.add('open');
 });
 
-// Close modal when clicking the close button
-closeBtn.addEventListener('click', () => {
+// Close when clicking the X
+closeBtn.addEventListener('click', function() {
   modal.classList.remove('open');
 });
 
-// Close modal when clicking outside modal-content (on backdrop)
+// Close when clicking outside the modal-content
 modal.addEventListener('click', function(event) {
   if (event.target === modal) {
     modal.classList.remove('open');
