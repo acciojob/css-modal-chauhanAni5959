@@ -1,7 +1,20 @@
-document.getElementById('openModal').addEventListener('click', function() {
-  document.getElementById('myModal').classList.add('open');
+const openModalBtn = document.getElementById('openModal');
+const modal = document.getElementById('myModal');
+const closeBtn = document.getElementById('closeBtn');
+
+// Open modal
+openModalBtn.addEventListener('click', () => {
+  modal.classList.add('open');
 });
 
-document.getElementById('closeBtn').addEventListener('click', function() {
-  document.getElementById('myModal').classList.remove('open');
+// Close modal when clicking the close button
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('open');
+});
+
+// Close modal when clicking outside modal-content (on backdrop)
+modal.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    modal.classList.remove('open');
+  }
 });
